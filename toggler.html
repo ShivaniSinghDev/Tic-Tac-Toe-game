@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;   
+        }
+        body{
+            background-color: rgb(30, 30, 30);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: 0.5s;
+
+        }
+        .toggler{
+            position: relative;
+            display: block;
+            width: 300px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: black;
+            cursor: pointer;
+            transition: 0.5s;
+
+        }
+         .indicate{
+            position: absolute;
+            top: 0px;
+            left: 0;
+            background-color: rgb(30, 30, 30);
+            height: 100px;
+            width: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: inset  8px 8px 30px black;
+            transition: 0.5s;
+        }
+         .active{
+            left: 190px;
+            background-color: white;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="toggler">
+        <i class="indicate"></i>
+    </div>
+    <script>
+        let body = document.querySelector('body')
+        let indicate= document.querySelector(".indicate")
+        indicate.onclick=function(){
+            indicate.classList.toggle("active")
+            body.classList.toggle('active')
+        }
+
+    </script>
+    
+</body>
+</html>
